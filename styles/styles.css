@@ -290,25 +290,19 @@ h2 {
     color: white; 
 }
 
-.main-secondary-service-section-card-container {    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 90%;
-    margin: 30px;
-}
-
 .main-secondary-service-section-card {
-    width: 400px;    
+      
     display: flex;
     flex-direction: column;
     margin: 10px 0px;
-    padding: 25px;
+    padding: 20px;
     border-radius: 8px; 
     background-color: aliceblue;
     box-shadow: 0px 2px 4px rgba(0.3, 0, 0, 0.3);
     align-items: center;
 }
+
+
 
 .main-secondary-service-section-card img{
     border-radius: 8px;
