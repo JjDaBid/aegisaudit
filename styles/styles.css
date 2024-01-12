@@ -3,11 +3,13 @@
     margin: 0;
     padding: 0;
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 html {
     font-family: 'Montserrat', sans-serif;
 }
+
 
 
 /* Menu de navagación */
@@ -59,19 +61,25 @@ nav ul li {
 nav ul li a{    
     font-size: 2rem;
     text-decoration: none; 
-    color: black;    
+    color: black;   
 }
 
 nav ul li a:hover{    
-    font-size: 2.1rem;
+    font-size: 2.05rem;
     text-decoration: none; 
-    color: gray;    
+    font-weight: bold;
+    color: black;   
 }
 
 
 /* Main Index Container */
-.main-container{
-    
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
 }
 
 .main-section {  
@@ -80,24 +88,28 @@ nav ul li a:hover{
     align-items: center;
     width: 100%;      
     height: 1000px;   
-    background:  url('../img/images/large.jpg') top/cover;
+    background:  url('../img/images/large.jpg') top/cover;        
 }
 
-.main-title {
-    
+.main-title {        
     font-size: 5rem;    
     text-align: center;   
     color: white; 
 }
 
 .main-secondary-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 90%;
+    display: grid;    
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 20px;
+    margin: 5px auto;   
+    padding: 5px;     
 }
 
-.main-secondary-section-head {
-    padding: 70px;
+.main-secondary-section-head { 
+    grid-area: 1 / 1 / 1 / 4;  
+    width: 100%;    
+    margin-bottom: 60px;
 }
 
 .main-secondary-section-title {    
@@ -113,13 +125,6 @@ nav ul li a:hover{
     text-align: center;
 }
 
-.main-secondary-section-card-container{
-    width: 90%;
-    display: flex;
-    flex-direction: column;    
-    margin-top: 50px;        
-}
-
 .main-secondary-section-card {  
     display: flex;
     flex-direction: column;
@@ -130,9 +135,9 @@ nav ul li a:hover{
     align-items: center;
 }
 
-.main-secondary-section-card-icon{
+ .main-secondary-section-card-icon{
     width: 80px;    
-}
+} 
 
 .main-secondary-section-card-title {
     margin: 20px 0px;
@@ -309,7 +314,6 @@ h2 {
     background: linear-gradient(90deg, rgba(45,35,119,1) 0%, rgba(89,142,195,1) 50%, rgba(29,14,70,1) 100%);
 }
 
-
 /* Contact */
 
 .contact-main-container {  
@@ -445,6 +449,10 @@ button {
     color: white;
 }
 
+.leftside-container a:hover {          
+    font-weight: bolder;
+}
+
 .social-networks {
     width: 34%;
     display: flex;    
@@ -486,7 +494,23 @@ button {
 /* Tablet View */
 
 @media only screen and (max-width: 980px) {
-        /* Footer */
+
+    /* Index main section */
+
+    .main-secondary-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-secondary-section-card {
+        grid-column: span 1;
+    }
+
+    .main-secondary-section-head {
+        grid-column: 1 / span 2;
+    }
+
+
+    /* Footer */
 
     .footer-container {
         display: flex;
@@ -495,7 +519,7 @@ button {
     }
 
     .leftside-container{
-        min-width: 500px;
+        width: 90%;
         flex-direction: column;
         margin-left: 0;            
     }
@@ -512,17 +536,26 @@ button {
         text-align: center;   
     }
 
+    .social-networks {
+        width: 90%;        
+    }
+
     .social-networks img {
         min-width: 50px;
     }
 
     .info-section {
-        width: 100%;    
-        margin-top: 30px;
+        width: 90%;    
+        margin-top: 20px;
         margin-right: 0px;  
-        margin-bottom: 20px;      
+        margin-bottom: 20px;   
+        background: linear-gradient(
+            90deg,
+            rgba(45, 35, 119, 0.8) 0%,
+            rgba(89, 142, 195, 0.8) 50%, 
+            rgba(29, 14, 70, 0.8) 100%  
+        );
     }
-
 
     .info-section div {
         justify-content: center;
@@ -538,9 +571,12 @@ button {
 
 /* Mobile View */
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 720px) {
+
+    /* Nav Menu */
+
     .nav-logo{      
-        max-width: 200px;
+        max-width: 100px;
         padding: 5px;    
     }
 
@@ -554,9 +590,9 @@ button {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Ajusta según sea necesario para evitar solapamientos con el contenido */
+        top: 60px; 
         left: 0;
-        background-color: white; /* Cambia el color de fondo según tu diseño */
+        background-color: white;
         width: 100%;
         text-align: center;
     }
@@ -567,21 +603,48 @@ button {
         text-align: center;
     }
 
+    /* Index main section */
+
+    .main-secondary-section {
+        grid-template-columns: 1fr;
+    }
+
+    .main-secondary-section-card {
+        grid-column: span 1;
+    }
+
+    .main-secondary-section-head {
+        grid-column: 1 / span 1;
+    }
+
+    .main-secondary-section-card:last-child {
+        grid-column: 1 / span 1;
+        justify-self: center;
+    }
+
 
     /* Footer */
 
-    .leftside-container{
-        min-width: 300px;
-        flex-direction: column;
-        
+    .leftside-container{        
+        flex-direction: column; 
     }
+
 
 
     .social-networks img {
-        min-width: 40px;
+        min-width: 25px;
     }
 
-
-
-
 }
+
+@media only screen and (max-width: 680px) {
+    .client-logos-container {
+        flex-direction: column;
+        gap: 50px;        
+    }
+
+    footer {
+        margin-top: 50px;
+    }
+}
+
