@@ -14,28 +14,34 @@ html {
 
 /* Menu de navagación */
 
-nav {    
+header {
     display: flex;
-    width: 100%;  
-    min-height: 70px;
-    position: absolute;
-    align-items: center;     
+    width: 100%;    
     position: fixed;
-    background: white;top: 0;
+    background: white;
+    top: 0;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.nav-logo-section {        
+.logo-section {        
     width: 20%;   
-    display: flex; 
+    display: flex;     
     justify-content: center;
-    align-items: center;  
-    margin-left: 50px;    
+    align-items: center;     
 }
 
-.nav-logo{      
-    min-width: 200px;
+.logo{      
+    width: 200px;
     padding: 5px;    
+}
+
+nav {    
+    display: flex;    
+    width: 80%;  
+    min-height: 70px;   
+    justify-items: end;   
+    align-items: center;     
+    
 }
 
 .nav-right-section {
@@ -129,7 +135,7 @@ nav ul li a:hover{
     display: flex;
     flex-direction: column;
     margin: 10px 0px;
-    padding: 50px;
+    padding: 20px;
     border-radius: 8px;    
     box-shadow: 0px 2px 4px rgba(0.3, 0, 0, 0.3);
     align-items: center;
@@ -419,17 +425,17 @@ button {
 
 .leftside-container {
     width: 33%;
-    display: flex;    
-    margin-left: 30px;
+    display: flex; 
     padding: 40px;
     list-style: none;    
     gap: 20px;
+    justify-content: center;
     align-items: center;   
     }
 
 .logo-footer {    
     min-width: 120px;
-    max-width: 120px;
+    max-width: 120px;    
     margin-right: 5px;
 }
 
@@ -470,19 +476,22 @@ button {
 }
 
 .info-section {
+    display: flex;
+    flex-direction: column;   
     width: 33%;    
-    margin-right: 30px;
 }
 
 .info-section-data {
+    width: 50%;
     display: flex;    
     padding: 5px;
+    margin: auto;
     align-items: center; 
 }
 
 .info-section img{
     width: 25px;    
-    margin-left: 70px;
+    
 }
 
 .info-section p{   
@@ -565,8 +574,13 @@ button {
         width: 25px;    
         margin-left: 0;
     }
-
         
+}
+
+@media only screen and (max-width: 850px) {
+    .main-title {
+        padding: 30px;
+    }
 }
 
 /* Mobile View */
@@ -575,15 +589,24 @@ button {
 
     /* Nav Menu */
 
-    .nav-logo{      
-        max-width: 100px;
+    .logo-section {
+        width: 70%;
+    }
+
+    .logo{      
+        min-width: 150px;
         padding: 5px;    
+    }
+
+    .nav-right-section{    
+        width: 30%;    
+        margin: auto;
     }
 
     .nav-menu-icon {
         display: block;
         width: 20px;        
-        cursor: pointer;               
+        cursor: pointer;           
     }
 
     .nav-right-section ul {
@@ -635,8 +658,6 @@ button {
         flex-direction: column; 
     }
 
-
-
     .social-networks img {
         min-width: 25px;
     }
@@ -656,8 +677,8 @@ button {
 
 @media only screen and (max-width: 450px) {
     .main-title {        
-        font-size: 4rem;    
-       
+        font-size: 4rem; 
+        padding: 30px;  
     }
 }
 
