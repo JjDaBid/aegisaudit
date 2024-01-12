@@ -383,7 +383,7 @@ button {
 /* Privacy Policy */
 
 .general-main-container {    
-    margin: 120px 50px;    
+    margin: 100px 20px;    
     justify-content: center;
 }
 
@@ -583,7 +583,7 @@ button {
     .nav-menu-icon {
         display: block;
         width: 20px;        
-        cursor: pointer;        
+        cursor: pointer;               
     }
 
     .nav-right-section ul {
@@ -597,10 +597,16 @@ button {
         text-align: center;
     }
 
-    .nav-logo-section,
-    .nav-right-section {
+    .nav-logo-section {
         width: 100%;
         text-align: center;
+    }
+
+    .nav-right-section {  
+        width: 35px;   
+        display: flex;
+        margin-right: 30px; 
+        justify-content: center;
     }
 
     /* Index main section */
@@ -647,4 +653,14 @@ button {
         margin-top: 50px;
     }
 }
+
+@media only screen and (max-width: 450px) {
+    .main-title {        
+        font-size: 4rem;    
+       
+    }
+}
+
+
+
 
