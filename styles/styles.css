@@ -94,7 +94,7 @@ nav ul li a:hover{
     align-items: center;
     width: 100%;      
     height: 1000px;   
-    background:  url('../img/images/large.jpg') top/cover;        
+    background:  url('../img/images/large.jpg') top/cover;          
 }
 
 .main-title {        
@@ -141,6 +141,10 @@ nav ul li a:hover{
     align-items: center;
 }
 
+.main-secondary-section-card:hover {  
+    background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+}
+
  .main-secondary-section-card-icon{
     width: 80px;    
 } 
@@ -173,7 +177,6 @@ nav ul li a:hover{
     flex-direction: column;
     align-items: center;       
 }
-
 
 .clients-title h3 {    
     font-size: 5rem;    
@@ -263,12 +266,62 @@ h2 {
     align-items: center;
 }
 
-.corporate-values {
-    width: 90%;
-    margin: auto;    
+.values-section{
+    width: 100%;
+    display: grid;    
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 20px;
+    margin: 50px auto;   
+    padding: 40px;    
+    background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+}
+
+.values-section-head { 
+    grid-area: 1 / 1 / 1 / 4;  
+    width: 100%;    
+    margin-bottom: 60px; 
+    text-align: center;   
+}
+
+.values-section-head img { 
+    width: 150px;    
+    justify-self: center;    
+}
+
+.values-section-card {  
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    padding: 25px;
     border-radius: 8px;    
     box-shadow: 0px 2px 4px rgba(0.3, 0, 0, 0.3);
+    align-items: center;
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
 }
+
+.values-section-card:hover { 
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+.values-card-subtitle {
+    margin: 50px 0px;
+    font-size: 2rem;    
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+
+.values-card-paragraph {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color:#e7f0fd
+}
+
+
+
+
+
 
 
 /* Services */
@@ -280,7 +333,7 @@ h2 {
     justify-content: center;
     align-items: center;        
     margin-top: 2px;
-    background:  url('../img/images/services-l.jpg') top/cover;
+    background:  url('../img/images/services2.jpg') top/cover;
 }
 
 .services-main-container-title {
@@ -290,18 +343,16 @@ h2 {
     color: white; 
 }
 
-.main-secondary-service-section-card {
-      
+.main-secondary-service-section-card {      
     display: flex;
     flex-direction: column;
     margin: 10px 0px;
     padding: 20px;
-    border-radius: 8px; 
-    background-color: aliceblue;
+    border-radius: 8px;     
     box-shadow: 0px 2px 4px rgba(0.3, 0, 0, 0.3);
     align-items: center;
+    background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
 }
-
 
 
 .main-secondary-service-section-card img{
@@ -553,10 +604,22 @@ button {
         grid-column: 1 / span 2;
     }
 
-    /* Abour section */
+    /* About section */
 
     .main-secondary-section-additional-card {      
         display: flex;
+    }
+
+    .values-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values-section-card {
+        grid-column: span 1;
+    }
+
+    .values-section-head {
+        grid-column: 1 / span 2;
     }
 
 
@@ -692,6 +755,19 @@ button {
         justify-self: center;
     }
 
+    /* About section */
+
+    .values-section {
+        grid-template-columns: 1fr;
+    }
+
+    .values-section-card {
+        grid-column: span 1;
+    }
+
+    .values-section-head {
+        grid-column: 1 / span 1;
+    }
 
     /* Footer */
 
