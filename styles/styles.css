@@ -585,7 +585,7 @@ textarea {
     }
 
     .leftside-container{
-        width: 100%;
+        width: 90%;
         flex-direction: column;
         margin-left: 0;            
     }
@@ -596,16 +596,11 @@ textarea {
         margin-right: 5px;
     }
 
-    .leftside-container ul {              
+    .leftside-container ul {               
         border-top: white solid;   
         border-left: none;             
-        text-align: center;  
-        padding: 0; 
+        text-align: center;   
     }
-
-    .leftside-container li {  
-    margin-left: 0;      
-}
 
     .social-networks {
         width: 90%;        
