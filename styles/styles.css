@@ -600,10 +600,15 @@ textarea {
         border-top: white solid;   
         border-left: none;             
         text-align: center;   
+        padding: 0;
+    }
+
+    .leftside-container li{
+        margin-left: 0;
     }
 
     .social-networks {
-        width: 90%;        
+        width: 100%;        
     }
 
     .social-networks img {
